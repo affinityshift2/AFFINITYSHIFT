@@ -132,10 +132,12 @@ The same normalization statistics are used for members, calibration non-members,
 
 Stable Diffusion v1.4 fine-tuning and affinity extraction scripts are available. Intrinsic-property extraction, reference-based detection, and Stable Diffusion v3.5 Large scripts will be added separately.
 
-## Citation
+# Classification: 
+After all features are in added in excel sheet, need to execute this command to classify
 
-If you use this code, please cite:
-
-*AffinityShift: Membership Inference for Diffusion Models via Intrinsic-Property-Conditioned Model–Image Affinity.*
-
-Citation details will be provided upon publication.
+```bash
+python RidgeRegression.py \
+  --input /path/to/combined_features.xlsx \
+  --output results/affinityshift_predictions.xlsx \
+  --summary results/affinityshift_summary.json
+```
