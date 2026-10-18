@@ -56,25 +56,16 @@ Only member images are used to fine-tune the target diffusion model.
 
 Fine-tune Stable Diffusion v1.4 using the member dataset.
 
-**MS-COCO:**
+**Dataset**
 
 ```bash
 python finetune_sd14_affinityshift.py \
-  --pretrained-model /path/to/sd-v1-4 \
-  --member-dir /path/to/mscoco/member \
-  --output-dir /path/to/output/mscoco \
-  --dataset mscoco
+  --pretrained-model /path/to/model \
+  --member-dir /path/to/dataset \
+  --output-dir /path/to/output/folder \
+  --dataset name
 ```
 
-**Flickr30k:**
-
-```bash
-python finetune_sd14_affinityshift.py \
-  --pretrained-model /path/to/sd-v1-4 \
-  --member-dir /path/to/flickr30k/member \
-  --output-dir /path/to/output/flickr30k \
-  --dataset flickr30k
-```
 
 ## Model–Image Affinity Extraction
 
@@ -91,14 +82,6 @@ python affinity_metrics_sd14.py \
 
 Repeat for non-member images using the same target-model checkpoint.
 
-## Reproducibility
-
-- Use image resolution 512 × 512.
-- Fine-tune using only member images.
-- Use disjoint non-member reference-fitting, calibration, and evaluation subsets.
-- Estimate reference functions using only non-member samples.
-- Calibrate the decision threshold on held-out non-members.
-- Use consistent model checkpoints, captions, and preprocessing.
 
 
 ## 2️⃣ Intrinsic Image Properties
