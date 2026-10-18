@@ -29,11 +29,11 @@ pip install torch torchvision diffusers transformers accelerate peft lpips sciki
 AffinityShift/
 ├── README.md
 ├── overview.png
-├── finetune_sd14_affinityshift.py
-├── affinity_metrics_sd14.py
+├── finetune.py
+├── affinity_metrics.py
 ├── image_predictibility.py
 ├── complexity.py
-└── ridge regression with classify.py
+└── classify.py
 ```
 
 ## Dataset Preparation
@@ -64,7 +64,7 @@ Only member images are used for fine-tuning.
 ### 🔹 Fine-Tuning Stable Diffusion v1.4
 
 ```bash
-python finetune_sd14_affinityshift.py \
+python finetune.py \
   --pretrained-model /path/to/model \
   --member-dir /path/to/dataset/member \
   --output-dir /path/to/output \
@@ -78,7 +78,7 @@ Use `--dataset flickr30k` for Flickr30k.
 Compute **SSIM, LPIPS, and Ensemble Variance** using the pretrained and fine-tuned diffusion models.
 
 ```bash
-python affinity_metrics_sd14.py \
+python affinity_metrics.py \
   --pretrained-model /path/to/sd-v1-4 \
   --finetuned-model /path/to/output/pipeline \
   --input-dir /path/to/dataset/member \
