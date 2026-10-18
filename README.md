@@ -5,6 +5,12 @@
 
 This repository contains the implementation of **AffinityShift**, a weakly supervised, one-class membership inference framework for diffusion models.
 
+## 🔍 Framework Overview
+
+<p align="left">
+  <img src="overview.PNG" alt="Framework Overview" width="650">
+</p>
+
 ## Requirements
 
 - Python 3.10+
