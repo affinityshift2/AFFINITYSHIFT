@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""AffinityShift: conditional non-member reference fitting and membership scoring.
-
-Inputs contain raw SSIM, LPIPS, Ensemble_Variance, Image_Predictability,
-Complexity, and Source labels. Intrinsic-property scaling/statistics used upstream
-must already have been fitted on the non-member reference-fitting subset only.
-"""
 import argparse
 import json
 from pathlib import Path
