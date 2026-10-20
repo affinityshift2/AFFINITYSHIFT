@@ -1,15 +1,4 @@
 #!/usr/bin/env python3
-"""Fine-tune Stable Diffusion v1.4 on MEMBER image-caption pairs only.
-
-Paper protocol (AffinityShift): MS-COCO 150000 steps or Flickr30k 60000
-steps; 512x512; batch size 1; learning rate 1e-4. Full UNet fine-tuning,
-with frozen VAE and text encoder, following the standard Diffusers
-text-to-image training architecture (NOT LoRA).
-
-This script is NOT proof of exact parity with Lian et al.'s private code:
-optimizer, augmentations, random seeds, and checkpoint selection should
-be compared with the specific training recipe used in the experiments.
-"""
 import argparse
 import json
 import math
