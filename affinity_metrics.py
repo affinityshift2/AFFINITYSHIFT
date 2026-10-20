@@ -1,18 +1,3 @@
-"""AffinityShift: paper-aligned Model–Image Affinity for Stable Diffusion v1.4.
-
-Metrics ONLY: SSIM, VGG-LPIPS, Ensemble Variance.
-
-Protocol: pretrained-model DDIM inversion (100 steps, CFG=1.0), then
-fine-tuned-model DDIM reconstruction (50 steps, CFG=3.5). Five additional
-reconstructions use the SAME inverted latent with controlled perturbations.
-
-This module targets Stable Diffusion v1.4 (UNet epsilon-prediction). SD3.5
-Large uses MMDiT / rectified flow and needs its own Euler-ODE implementation.
-The provided paper does not uniquely specify DDIM scheduler discretization,
-VAE encoding convention, or pixel resize interpolation; defaults are stated
-here to make this script reproducible, not to claim bit-for-bit replication.
-"""
-
 import argparse
 import csv
 import gc
