@@ -1,14 +1,3 @@
-"""AffinityShift intrinsic Image Complexity (Section 3.3.1).
-
-C_i = z(edge_density) + z(gradient_magnitude) + z(laplacian_variance)
-    + z(shannon_entropy) + z(colorfulness) - z(jpeg_psnr).
-
-Fit the six normalization statistics ONLY on the verified non-member
-reference-fitting subset; reuse the saved JSON for every other split.
-
-Requires: numpy, opencv-python.
-"""
-
 from __future__ import annotations
 
 import argparse
