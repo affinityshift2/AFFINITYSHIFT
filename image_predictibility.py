@@ -1,18 +1,4 @@
 #!/usr/bin/env python3
-"""AffinityShift — image predictability extraction.
-
-Two explicit, NON-INTERCHANGEABLE modes:
-  official-bpsp: Runs the authentic Cao et al. SReC compressor and reports
-      theoretical bits-per-subpixel (plus an optional monotonic proxy).
-      This is NOT Eq. (8)-(9) of the AffinityShift manuscript.
-  paper-dual-context: Evaluates Eq. (8)-(9) using a user-supplied provider
-      that MUST actually extract local (3x3) and global per-pixel discrete
-      probabilities from a fixed SReC model. This provider is not part of
-      the original SReC evaluation interface; we refuse to fake it.
-
-Requires a local clone of https://github.com/caoscott/SReC for either mode.
-No checkpoints are trained or updated here. No member labels are used.
-"""
 from __future__ import annotations
 
 import argparse
