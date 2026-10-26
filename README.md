@@ -8,7 +8,7 @@ This repository contains the implementation of **AffinityShift**, a weakly super
 ## 🔍 Framework Overview
 
 <p align="center">
-  <img src="overview.png" alt="AffinityShift Framework" width="650">
+  <img src="Approach_Overview.png" alt="AffinityShift Framework" width="650">
 </p>
 
 ## Requirements
