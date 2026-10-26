@@ -1,7 +1,5 @@
 
-# AffinityShift
-
-**Membership Inference for Diffusion Models via Intrinsic-Property-Conditioned Model–Image Affinity**
+# AFFINITYSHIFT: Membership Inference for Diffusion Models via Intrinsic-Property-Conditioned Model–Image Affinity
 
 This repository contains the implementation of **AffinityShift**, a weakly supervised, one-class membership inference framework for diffusion models.
 
